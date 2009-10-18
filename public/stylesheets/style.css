@@ -1,5 +1,22 @@
+html {
+	background:#444;
+}
 body {
-	margin:0;
+	margin:0 auto;
+	background:white;
+	width:640px;
+	height:600px;
+	font-family: georgia;
+}
+
+#header {
+	padding:20px;
+}
+#header h1 {
+	margin-top:4px;
+}
+#game {
+	position:relative;
 }
 .peasant {
 	background:url('/images/peasant-full.gif') no-repeat -128px 0px;

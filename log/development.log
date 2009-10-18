@@ -1257,3 +1257,63 @@ Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/game/play]
 Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:04:49) [GET]
 Rendering game/play
 Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:17:36) [GET]
+Rendering game/play
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:17:48) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:17:54) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:18:08) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:18:21) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:18:25) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:18:44) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:19:07) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:19:32) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:19:52) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:20:15) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:20:29) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]

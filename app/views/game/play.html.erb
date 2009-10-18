@@ -9,36 +9,46 @@
 	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-
-	<div id="map" style="">
-	<% width = 0 %>
-	<% count = 0 %>
-	<% map_height = 0 %>
-	<% @tiles.each do |tile,index| %>
-		<% y = (count/@width).to_i %>
-		<% x = count-(@width*y) %>
-		<% unless tile[:type] == 'X' %>
-			<a class='tile <%= x.to_s+'-'+y.to_s %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
-		<% end %>
-		<% count += 1 %>
-		<% map_height = y+1 %>
-	<% end %>
-	</div>
 	
-	<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-6 %>px;">
-		<div id="selection">
-			<div id="portrait">
-				<h3>Peasant</h3>
-			</div>
-			<div id="tasks">
-				<a href="" class='task'>Build farm</a>
-				<a href="" class='task'>Harvest wood</a>
+	<div id="header">
+		<h1>Workraft</h1>
+
+		<p>
+			Welcome to Workraft, where you ...
+		</p>
+	</div>
+
+	<div id="game">
+		<div id="map" style="">
+		<% width = 0 %>
+		<% count = 0 %>
+		<% map_height = 0 %>
+		<% @tiles.each do |tile,index| %>
+			<% y = (count/@width).to_i %>
+			<% x = count-(@width*y) %>
+			<% unless tile[:type] == 'X' %>
+				<a class='tile <%= x.to_s+'-'+y.to_s %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
+			<% end %>
+			<% count += 1 %>
+			<% map_height = y+1 %>
+		<% end %>
+		</div>
+
+		<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-6 %>px;">
+			<div id="selection">
+				<div id="portrait">
+					<h3>Peasant</h3>
+				</div>
+				<div id="tasks">
+					<a href="" class='task'>Build farm</a>
+					<a href="" class='task'>Harvest wood</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="peasants">
-		
+
+		<div id="peasants">
+
+		</div>
 	</div>
 
 	<script type="text/javascript" charset="utf-8">
