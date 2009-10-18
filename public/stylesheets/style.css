@@ -1,0 +1,50 @@
+body {
+	margin:0;
+}
+.peasant {
+	background:url('/images/peasant-full.gif') no-repeat -128px 0px;
+	position:absolute;
+	margin:8px;
+	top:0;
+	left:64px;
+	width:48px;
+	height:48px;
+}
+#menu {
+	color:white;
+	border:3px solid #99451E;
+	background:#3B100B;
+}
+#menu #selection {
+	font-family:lucida grande,lucida sans console;
+	padding:8px;
+	text-align:center;
+}
+#menu #selection #portrait {
+	margin-bottom:8px;
+	margin-right:8px;
+	float:left;
+	display:block;
+	height:94px;
+	width:94px;
+	border:3px solid red;
+}
+#menu #selection #tasks {
+	float:left;
+	font-size:10px;
+	font-weight:bold;
+}
+#menu #selection a.task {
+	background:#333;
+	color:white;
+	display:block;
+	height:34px;
+	width:42px;
+	margin-bottom:4px;
+	border:3px solid red;
+	padding-top:8px;
+}
+#menu #selection a:hover.task {
+	border:3px solid orange;
+	background:#222;
+}

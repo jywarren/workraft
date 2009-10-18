@@ -5,27 +5,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Workraft</title>
-	<style type="text/css" media="screen">
-		#map {
-			width:<%= 64*@width %>px;
-		}
-		.peasant {
-			background:url('/images/peasant-full.gif') no-repeat -128px 0px;
-			position:absolute;
-			margin:8px;
-			top:0;
-			left:64px;
-			width:48px;
-			height:48px;
-		}
-	</style>
 	<script src="/javascripts/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 
-	<div id="map">
+	<div id="map" style="">
 	<% width = 0 %>
 	<% count = 0 %>
+	<% map_height = 0 %>
 	<% @tiles.each do |tile,index| %>
 		<% y = (count/@width).to_i %>
 		<% x = count-(@width*y) %>
@@ -33,22 +21,36 @@
 			<a class='tile <%= x.to_s+'-'+y.to_s %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
 		<% end %>
 		<% count += 1 %>
+		<% map_height = y+1 %>
 	<% end %>
+	</div>
+	
+	<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-6 %>px;">
+		<div id="selection">
+			<div id="portrait">
+				<h3>Peasant</h3>
+			</div>
+			<div id="tasks">
+				<a href="" class='task'>Build farm</a>
+				<a href="" class='task'>Harvest wood</a>
+			</div>
+		</div>
 	</div>
 	
 	<div id="peasants">
 		
 	</div>
+
 	<script type="text/javascript" charset="utf-8">
 		var Workraft = {
 			frame: 0,
-			peasants: [],
+			peasants: new Hash,
 			keypress: function(event) {
 				// if (e.keyCode)
 			},
 			draw: function() {
 				Workraft.frame += 1
-				Workraft.peasants.each(function(peasant){
+				Workraft.peasants.values().each(function(peasant){
 					peasant.draw()
 				})
 			}
@@ -56,24 +58,29 @@
 		Event.observe(document, 'keypress', Workraft.keypress)
 		// Event.observe(document, 'keyup', Events.keyup)
 		var Peasant = Class.create({
-			initialize: function() {
+			initialize: function(x,y) {
+				this.x = x*64
+				this.y = y*64
 				this.id = 'peasant-'+parseInt((new Date).getTime())
 				$('peasants').insert('<a class="peasant" href="" id="'+this.id+'"></a>')
-				$(this.id).href = "javascript:$('"+this.id+"').mode = 'standing'"
+				$(this.id).href = "javascript:Workraft.peasants.get('"+this.id+"').mode = 'chopping'"
+				Workraft.peasants.set(this.id,this)
 			},
 			mode: 'walking',
 			set: 0,
+			// various states of animation:
 			steps: [0,-48,-96,-144,-192,-144,-96,-48],
+			// what frame of the animation we're in
 			step: 0,
 			x: 64,
 			y: 64,
 			draw: function() {
 				if (this.mode != 'standing') {
 					if (this.mode == 'walking') this.set = 0
-					if (this.mode == 'chopping') this.set = 42
+					if (this.mode == 'chopping') this.set = -48
 					$(this.id).style.backgroundPosition = this.steps[this.step]+"px "+this.set+"px"
-					$(this.id).style.top = Peasant.y
-					$(this.id).style.left = Peasant.x
+					$(this.id).style.top = this.y+'px'
+					$(this.id).style.left = this.x+'px'
 					this.step += 1
 					if (this.step >= this.steps.length) this.step = 0
 				} else {
@@ -81,10 +88,13 @@
 				}
 			}
 		})
-		Workraft.peasants.push(new Peasant)
-		Workraft.peasants.push(new Peasant)
+		// just add dummy peasants for testing:
+		new Peasant(0,1)
+		new Peasant(2,2)
+
+		// draw every frame
 		new PeriodicalExecuter(Workraft.draw,0.1)
 	</script>
-
+	
 </body>
 </html>

@@ -808,3 +808,452 @@ Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
 Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:53:25) [GET]
 Rendering game/play
 Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:10:01) [GET]
+Rendering game/play
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:24:03) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:26:23) [GET]
+Rendering game/play
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #84 of app/views/game/play.html.erb:
+81: 		<% end %>
+82: 		<% count += 1 %>
+83: 	<% end %>
+84: 	<style type="text/css" media="screen"> #map { height:<%= y*64 %>px; } </style>
+85: 	</div>
+86: 	
+87: 	<div id="menu">
+
+    app/views/game/play.html.erb:84:in `y'
+    app/views/game/play.html.erb:84
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:27:01) [GET]
+Rendering game/play
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #84 of app/views/game/play.html.erb:
+81: 		<% end %>
+82: 		<% count += 1 %>
+83: 	<% end %>
+84: 	<style type="text/css" media="screen"> #map { height:<%= y*64 %>px; } </style>
+85: 	</div>
+86: 	
+87: 	<div id="menu" style="clear:both;">
+
+    app/views/game/play.html.erb:84:in `y'
+    app/views/game/play.html.erb:84
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:27:05) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:27:54) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:28:49) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:28:51) [GET]
+Rendering game/play
+Completed in 81ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:29:03) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:29:09) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:29:14) [GET]
+Rendering game/play
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:29:23) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:30:00) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:30:08) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:30:19) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:30:39) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:30:46) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:31:06) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:32:24) [GET]
+Rendering game/play
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:32:32) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:32:50) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:32:56) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:33:11) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:33:21) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:33:41) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:33:51) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:35:03) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:35:22) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:35:32) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:35:45) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:36:07) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:36:22) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:36:29) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:36:36) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:37:02) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:37:05) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:37:13) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:37:35) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:42:21) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:42:30) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:42:39) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:42:49) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:08) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:18) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:21) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:31) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:46) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:43:55) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:44:12) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:44:16) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:44:39) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:44:50) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:45:33) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:46:05) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:46:06) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:46:28) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:47:35) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:48:30) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:49:27) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:49:28) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:49:34) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:50:04) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:50:18) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:51:32) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:53:16) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:53:26) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:53:44) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (17.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGames (20091017205729)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "map" varchar(255) DEFAULT 'TTTTTTTTTG,GGFGTGTCXG,EGGGGGTXXG,GGTHXGTGGG,GGTXXGGGGG', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091017205729')[0m
+Migrating to CreateTasks (20091018195423)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT 'Harvest wood', "specs" varchar(255) DEFAULT 'A1:B4', "route" varchar(255) DEFAULT '', "worker" varchar(255) DEFAULT 'anonymous', "game_id" integer DEFAULT 0, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091018195423')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("games")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tasks")[0m
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 15:58:53) [GET]
+Rendering game/play
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/game/play]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGames (20091017205729)
+Migrating to CreateTasks (20091018195423)
+Migrating to AddDone (20091018200306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGames (20091017205729)
+Migrating to CreateTasks (20091018195423)
+Migrating to AddDone (20091018200306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGames (20091017205729)
+Migrating to CreateTasks (20091018195423)
+Migrating to AddDone (20091018200306)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (14.1ms)[0m   [0mALTER TABLE "tasks" ADD "completed" boolean DEFAULT 'f'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091018200306')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("games")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tasks")[0m
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:04:47) [GET]
+Rendering game/play
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 16:04:49) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
