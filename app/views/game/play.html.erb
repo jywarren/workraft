@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Workraft</title>
+	<style type="text/css" media="screen">
+		#map {
+			width:<%= 64*@width %>px;
+		}
+		.peasant {
+			background:url('/images/peasant-full.gif') no-repeat -128px 0px;
+			position:absolute;
+			margin:8px;
+			top:0;
+			left:64px;
+			width:48px;
+			height:48px;
+		}
+	</style>
+	<script src="/javascripts/prototype.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<div id="map">
+	<% width = 0 %>
+	<% count = 0 %>
+	<% @tiles.each do |tile,index| %>
+		<% y = (count/@width).to_i %>
+		<% x = count-(@width*y) %>
+		<% unless tile[:type] == 'X' %>
+			<a class='tile <%= x.to_s+'-'+y.to_s %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
+		<% end %>
+		<% count += 1 %>
+	<% end %>
+	</div>
+	
+	<div id="peasants">
+		
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		var Workraft = {
+			frame: 0,
+			peasants: [],
+			keypress: function(event) {
+				// if (e.keyCode)
+			},
+			draw: function() {
+				Workraft.frame += 1
+				Workraft.peasants.each(function(peasant){
+					peasant.draw()
+				})
+			}
+		}
+		Event.observe(document, 'keypress', Workraft.keypress)
+		// Event.observe(document, 'keyup', Events.keyup)
+		var Peasant = Class.create({
+			initialize: function() {
+				this.id = 'peasant-'+parseInt((new Date).getTime())
+				$('peasants').insert('<a class="peasant" href="" id="'+this.id+'"></a>')
+				$(this.id).href = "javascript:$('"+this.id+"').mode = 'standing'"
+			},
+			mode: 'walking',
+			set: 0,
+			steps: [0,-48,-96,-144,-192,-144,-96,-48],
+			step: 0,
+			x: 64,
+			y: 64,
+			draw: function() {
+				if (this.mode != 'standing') {
+					if (this.mode == 'walking') this.set = 0
+					if (this.mode == 'chopping') this.set = 42
+					$(this.id).style.backgroundPosition = this.steps[this.step]+"px "+this.set+"px"
+					$(this.id).style.top = Peasant.y
+					$(this.id).style.left = Peasant.x
+					this.step += 1
+					if (this.step >= this.steps.length) this.step = 0
+				} else {
+					$(this.id).style.backgroundPosition = "0px "+this.set+"px"
+				}
+			}
+		})
+		Workraft.peasants.push(new Peasant)
+		Workraft.peasants.push(new Peasant)
+		new PeriodicalExecuter(Workraft.draw,0.1)
+	</script>
+
+</body>
+</html>

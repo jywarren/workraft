@@ -1,0 +1,810 @@
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:16:08) [GET]
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/game_controller.rb:11:in `+'
+  app/controllers/game_controller.rb:11:in `play'
+
+Rendered rescues/_trace (41.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:16:16) [GET]
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/game_controller.rb:11:in `+'
+  app/controllers/game_controller.rb:11:in `play'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:17:09) [GET]
+Rendering game/play
+Completed in 60ms (View: 58, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-18 09:17:09) [GET]
+
+ActionController::RoutingError (No route matches "/tiles/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-18 09:17:09) [GET]
+
+ActionController::RoutingError (No route matches "/tiles/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:17:28) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:18:09) [GET]
+Rendering game/play
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:19:20) [GET]
+Rendering game/play
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:20:56) [GET]
+Rendering game/play
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #18 of app/views/game/play.html.erb:
+15: 
+16: 	<div id="map">
+17: 	<% @tiles.each do |tile,index| %>
+18: 		<% width += 1 %>
+19: 		<img src='/tiles/<%= tile %>' style='float:left;position:absolute;top:<%= (index/width).to_i %>' />
+20: 		<%  %>
+21: 	<% end %>
+
+    app/views/game/play.html.erb:18
+    app/views/game/play.html.erb:17:in `each'
+    app/views/game/play.html.erb:17
+
+Rendered rescues/_trace (51.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:21:08) [GET]
+Rendering game/play
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil./) on line #20 of app/views/game/play.html.erb:
+17: 	<% width = 0 %>
+18: 	<% @tiles.each do |tile,index| %>
+19: 		<% width += 1 %>
+20: 		<img src='/tiles/<%= tile %>' style='float:left;position:absolute;top:<%= (index/width).to_i %>' />
+21: 		<%  %>
+22: 	<% end %>
+23: 	</div>
+
+    app/views/game/play.html.erb:20
+    app/views/game/play.html.erb:18:in `each'
+    app/views/game/play.html.erb:18
+
+Rendered rescues/_trace (49.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:21:42) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:25:33) [GET]
+Rendering game/play
+ERROR: compiling _run_erb_app47views47game47play46html46erb RAISED compile error
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:24: syntax error, unexpected ')'
+;  left = count-(top*) ; @output_buffer.concat "\n\t...
+                      ^
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\t</div>\n\n</body>\n</html>\n"
+      ^
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:32: syntax error, unexpected kENSURE, expecting ')'
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:34: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47game47play46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n   \"http://www.w3.org/TR/html4/loose.dtd\">\n\n<html lang=\"en\">\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n\t<title>Workraft</title>\n\t<style type=\"text/css\" media=\"screen\">\n\t\t#map {\n\t\t\twidth:"
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( 64*@width ).to_s); @output_buffer.concat "px;\n\t\t}\n\t</style>\n</head>\n<body>\n\n\t<div id=\"map\">\n\t"
+
+
+
+
+
+
+;  width = 0 ; @output_buffer.concat "\n\t"
+;  count = 0 ; @output_buffer.concat "\n\t"
+;  @tiles.each do |tile,index| ; @output_buffer.concat "\n\t\t"
+;  x += 1 if count < @width ; @output_buffer.concat "\n\t\t"
+;  x = 0 if count == @width ; @output_buffer.concat "\n\t\t"
+;  count += 1 ; @output_buffer.concat "\n\t\t"
+;  top = (count/width).to_i ; @output_buffer.concat "\n\t\t"
+;  left = count-(top*) ; @output_buffer.concat "\n\t\t<img src='/tiles/"
+; @output_buffer.concat(( tile ).to_s); @output_buffer.concat "' style='float:left;position:absolute;left:"; @output_buffer.concat(( left ).to_s); @output_buffer.concat ";top:"; @output_buffer.concat(( top ).to_s); @output_buffer.concat "' />\n\t"
+;  end ; @output_buffer.concat "\n\t</div>\n\n</body>\n</html>\n"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/warren/Sites/workraft/app/views/game/play.html.erb:34:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Users/warren/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:24: syntax error, unexpected ')'
+;  left = count-(top*) ; @output_buffer.concat "\n\t...
+                      ^
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:26: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\t</div>\n\n</body>\n</html>\n"
+      ^
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:32: syntax error, unexpected kENSURE, expecting ')'
+/Users/warren/Sites/workraft/app/views/game/play.html.erb:34: syntax error, unexpected kEND, expecting ')') on line #24 of app/views/game/play.html.erb:
+21: 		<% x = 0 if count == @width %>
+22: 		<% count += 1 %>
+23: 		<% top = (count/width).to_i %>
+24: 		<% left = count-(top*) %>
+25: 		<img src='/tiles/<%= tile %>' style='float:left;position:absolute;left:<%= left %>;top:<%= top %>' />
+26: 	<% end %>
+27: 	</div>
+
+    app/views/game/play.html.erb:34:in `compile!'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:27:39) [GET]
+Rendering game/play
+
+ActionView::TemplateError (undefined local variable or method `left' for #<ActionView::Base:0x2c3ee3c>) on line #23 of app/views/game/play.html.erb:
+20: 		<% count += 1 %>
+21: 		<% y = (count/@width).to_i %>
+22: 		<% x = count-(@width*y) %>
+23: 		<img src='/tiles/<%= tile %>' style='float:left;position:absolute;left:<%= left*64 %>;top:<%= top*64 %>' />
+24: 	<% end %>
+25: 	</div>
+26: 
+
+    app/views/game/play.html.erb:23
+    app/views/game/play.html.erb:19:in `each'
+    app/views/game/play.html.erb:19
+
+Rendered rescues/_trace (49.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:27:46) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:27:58) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:28:07) [GET]
+Rendering game/play
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:31:05) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:31:28) [GET]
+Rendering game/play
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:34:46) [GET]
+Rendering game/play
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-18 09:34:46) [GET]
+
+ActionController::RoutingError (No route matches "/tiles/blank" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-18 09:34:46) [GET]
+
+ActionController::RoutingError (No route matches "/tiles/blank" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:35:02) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:36:00) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:36:50) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:37:11) [GET]
+Rendering game/play
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:45:47) [GET]
+Rendering game/play
+
+ActionView::TemplateError (String can't be coerced into Fixnum) on line #89 of app/views/game/play.html.erb:
+86: 		<% y = (count/@width).to_i %>
+87: 		<% x = count-(@width*y) %>
+88: 		<% unless tile[:type] == 'X' %>
+89: 			<a class='tile <%= x+'-'+y %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
+90: 		<% end %>
+91: 		<% count += 1 %>
+92: 	<% end %>
+
+    app/views/game/play.html.erb:89:in `+'
+    app/views/game/play.html.erb:89
+    app/views/game/play.html.erb:85:in `each'
+    app/views/game/play.html.erb:85
+
+Rendered rescues/_trace (122.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:45:58) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:50:17) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:50:52) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:07) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:19) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:26) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:35) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:35) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:46) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:53) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:51:56) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:01) [GET]
+Rendering game/play
+Completed in 73ms (View: 70, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:06) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:07) [GET]
+Rendering game/play
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:16) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:30) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:31) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:46) [GET]
+Rendering game/play
+Completed in 70ms (View: 67, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:52:47) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:53:41) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:53:53) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:53:53) [GET]
+Rendering game/play
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:53:58) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:54:08) [GET]
+Rendering game/play
+Completed in 69ms (View: 67, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:54:15) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:54:22) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:54:30) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:54:36) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:55:02) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:55:07) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:55:10) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 09:55:17) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:03:06) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:03:19) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:03:33) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:03:39) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:11:15) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:11:40) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:11:46) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:11:58) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:13:34) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:13:35) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:13:46) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:14:07) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:14:14) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:14:28) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:14:37) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:15:11) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:15:25) [GET]
+Rendering game/play
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:16:29) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:18:30) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:18:41) [GET]
+Rendering game/play
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:19:30) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:19:53) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:20:14) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:24:18) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:24:51) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:25:09) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:25:13) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:26:18) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:27:48) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:28:07) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:29:08) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:29:28) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 10:29:40) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:25:05) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:26:47) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:28:13) [GET]
+Rendering game/play
+Completed in 70ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:31:39) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:34:52) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:35:03) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:35:17) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:35:47) [GET]
+Rendering game/play
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:35:55) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:36:22) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:39:32) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:40:55) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:42:50) [GET]
+Rendering game/play
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:43:42) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:44:33) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:45:13) [GET]
+Rendering game/play
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:45:29) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:45:39) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:48:06) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:48:22) [GET]
+Rendering game/play
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:50:18) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:50:46) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:52:33) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:53:11) [GET]
+Rendering game/play
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-18 11:53:25) [GET]
+Rendering game/play
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/game/play]

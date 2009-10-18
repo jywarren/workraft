@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>GLOP</title>
+	<script src="lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/scriptaculous/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/modalbox/modalbox.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="lib/scriptaculous/dragdrop.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- <script src="lib/codepress/codepress.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="lib/modalbox/modalbox.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script type="text/javascript" charset="utf-8">
+		function load_script(script) {
+			$$('head')[0].insert(new Element('script', { 'src': script, 'type': 'text/javascript', 'charset': 'utf-8' }));
+		}
+		function load_scripts() {
+			// These are asynchronous - no guarantee of order... problematic?
+			// Can we aggregate responses and trigger an 'all loaded' event?
+			load_script('canvas.js');
+			load_script('glop.js');
+			load_script('events.js');
+			load_script('layers.js');
+			load_script('box.js');
+			// load_script('rala.js');
+			// load_script('glyphs.js');
+		}
+	</script>
+</head>
+<body oncontextmenu="return false;" onLoad="load_scripts();">
+
+<textarea style="display:none" id="dropject"></textarea>
+
+<div id="pointerLabel"></div>
+
+<canvas id="canvas"></canvas>
+
+<form id="shell_form" action="javascript:void(0);" onSubmit="eval($('shell').value);//$('shell').value = '';" method="get" accept-charset="utf-8">
+	<p style="margin:2px;">
+		<div id="info">2</div> 
+		<input id="shell" type="text" value="" style="width:450px;"/>
+		<input type="submit" value="Run" /> 
+	</p>
+</form>
+
+<form id="script_form" style="display:none;" action="javascript:void(0);" onSubmit="eval($('script').value);" method="get" accept-charset="utf-8">
+	<p style="margin:2px;">
+		<textarea id="script">objects.each(function(object) {
+
+  object.y = Math.random()*30
+
+})</textarea>
+		<input type="submit" value="Run" />
+	</p>
+</form>
+
+<p>
+<!-- <a id="editmode_button" class="button green" href="javascript:void(0);" onClick="switch_editmode()">PLAY MODE</a>  -->
+<a class="button" href="javascript:void(0)" onClick="$('trace_div').toggle()">Log</a> 
+<a id="console_button" class="button" href="javascript:void(0);" onClick="switch_console()">Larger</a>
+</p>
+
+<div id="trace_div" style="display:none;">
+	<b>Trace:</b><br /><br />
+	<div id="trace">
+		
+	</div>
+	<br />
+	<a href="javascript:void(0)" onClick="log = []">Clear</a>	
+</div>
+
+</body>
+</html>
