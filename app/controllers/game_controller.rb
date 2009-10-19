@@ -2,16 +2,13 @@ class GameController < ApplicationController
 
   def play
     
-    params[:map] = ["TTTTTTTTTG",
-                    "GGFGTGTCXG",
-                    "EGGGGGTXXG",
-                    "GGTHXGTGGG",
-                    "GGTXXGGGGG"]
-    @width = params[:map][0].length
+    @game = Game.find(params[:id])
+    map = @game.map.split(',')
+    @width = map[0].length
     puts 'width = '+@width.to_s
     @tiles = []
     
-    params[:map].each do |row|
+    map.each do |row|
       row.each_char do |char|
         @tiles << {:image => 'castle.gif',:type => "C"}    if char == "C"
         @tiles << {:image => 'farm.gif',:type => "F"}      if char == "F"

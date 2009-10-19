@@ -31,14 +31,15 @@ body {
 	color:white;
 	border:3px solid #99451E;
 	background:#3B100B;
+	padding:8px;
+	padding-bottom:none;
+	height:100px;
 }
 #menu #selection {
 	font-family:lucida grande,lucida sans console;
-	padding:8px;
 	text-align:center;
 }
 #menu #selection #portrait {
-	margin-bottom:8px;
 	margin-right:8px;
 	float:left;
 	display:block;
@@ -50,18 +51,47 @@ body {
 	float:left;
 	font-size:10px;
 	font-weight:bold;
+	width:200px;
 }
 #menu #selection a.task {
 	background:#333;
 	color:white;
+	float:left;
 	display:block;
 	height:34px;
 	width:42px;
 	margin-bottom:4px;
 	border:3px solid red;
 	padding-top:8px;
+	margin-right:8px;
 }
 #menu #selection a:hover.task {
 	border:3px solid orange;
 	background:#222;
+}
+#menu #selection a.task img {
+	position:absolute;
+	z-index:5;
+}
+#menu #message {
+	width:150px;
+	float:left;
+}
+#menu #info {
+	margin-left:8px;
+	margin:0;
+	height:94px;
+	width:94px;
+	float:right;
+	border:3px solid #99451E;
+}
+.tile {
+	position:absolute;
+	display:block;width:64px;height:64px;
+}
+.tile.big {
+	width:128px;height:128px;
+}
+.highlight.big {
+	width:128px;height:128px;
 }

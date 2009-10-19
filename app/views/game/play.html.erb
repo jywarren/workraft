@@ -10,51 +10,32 @@
 </head>
 <body>
 	
-	<div id="header">
-		<h1>Workraft</h1>
-
-		<p>
-			Welcome to Workraft, where you ...
-		</p>
-	</div>
-
-	<div id="game">
-		<div id="map" style="">
-		<% width = 0 %>
-		<% count = 0 %>
-		<% map_height = 0 %>
-		<% @tiles.each do |tile,index| %>
-			<% y = (count/@width).to_i %>
-			<% x = count-(@width*y) %>
-			<% unless tile[:type] == 'X' %>
-				<a class='tile <%= x.to_s+'-'+y.to_s %>' href='javascript:alert("<%= tile[:type] %>")' ><img src='/tiles/<%= tile[:image] %>' style='float:left;position:absolute;left:<%= x*64 %>px;top:<%= y*64 %>px;' /></a>
-			<% end %>
-			<% count += 1 %>
-			<% map_height = y+1 %>
-		<% end %>
-		</div>
-
-		<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-6 %>px;">
-			<div id="selection">
-				<div id="portrait">
-					<h3>Peasant</h3>
-				</div>
-				<div id="tasks">
-					<a href="" class='task'>Build farm</a>
-					<a href="" class='task'>Harvest wood</a>
-				</div>
-			</div>
-		</div>
-
-		<div id="peasants">
-
-		</div>
-	</div>
-
 	<script type="text/javascript" charset="utf-8">
 		var Workraft = {
+			id: '<%= @game.id %>',
+			gold: 200,
+			tiles: new Hash,
 			frame: 0,
+			letters: ['A','B','C','D','E','F','G','H','I','J','K'],
+			selected: null,
+			// codes to highlight, like 'GH' for Town Hall and Grass
+			highlighting: '',
+			clear_highlights: function() {
+				$$('.tile').each(function(tile){tile.innerHTML = "";})
+			},
 			peasants: new Hash,
+			initialize: function() {
+				<% width = 0 %>
+				<% count = 0 %>
+				<% map_height = 0 %>
+				<% @tiles.each do |tile,index| %>
+					<% y = (count/@width).to_i %>
+					<% x = count-(@width*y) %>
+					new Tile('<%= tile[:type]%>',<%= x %>,<%= y %>,'<%= tile[:image] %>')
+					<% count += 1 %>
+					<% map_height = y+1 %>
+				<% end %>
+			},
 			keypress: function(event) {
 				// if (e.keyCode)
 			},
@@ -63,8 +44,125 @@
 				Workraft.peasants.values().each(function(peasant){
 					peasant.draw()
 				})
-			}
+			},
+			update: function() {
+				////////////////////////////////////////////////////////
+				// Receive completed commands, if any:
+				////////////////////////////////////////////////////////
+				new Ajax.Request('/game/update',{
+					onSuccess: function(response) {
+						response = response.responseText.evalJSON()
+						response.tasks.each(function(task){
+							// must identify which peasant it's for
+							// 
+						})
+					}
+				})
+			},
+			clear: function() {
+				Workraft.highlighting = ''
+				$('tasks').innerHTML = ""
+				$('message').innerHTML = ""
+				$('portrait').innerHTML = ""
+			},
+			task: 'none',
+			// click: function(type,x,y) {
+			// 	Workraft.clear()
+			// 	Workraft.clear_highlights()
+			// 	var tile = Workraft.tiles.get(x+','+y)
+			// 	tile.click()
+			// }
 		}
+		Event.observe(document,'dom:loaded',Workraft.initialize)
+		var Tile = Class.create({
+			initialize: function(type,x,y,image) {
+				this.x = x
+				this.y = y
+				this.type = type
+				this.big = (this.type == "C" || this.type == "H")
+				if (this.big) this.bigclass = " big"
+				else this.bigclass = ''
+				Workraft.tiles.set(x+','+y,this)
+				if (type != 'X') {
+					$('map').insert("<a class='tile "+this.bigclass+"' style='background:url(\"/tiles/"+image+"\");left:"+(x*64)+"px;top:"+(y*64)+"px;' id='"+x+'-'+y+"' ></a>")
+					$(this.x+'-'+this.y).observe('mouseover',this.hover.bind(this))
+					$(this.x+'-'+this.y).observe('mouseup',this.click.bind(this))
+				}
+			},
+			element: function() {
+				return $(this.x+'-'+this.y)
+			},
+			click: function() {
+				Workraft.clear()
+				Workraft.clear_highlights()
+				////////////////////////////////////////////////////////
+				// deal with commands, like build, harvest, move, attack
+				////////////////////////////////////////////////////////
+				var command = Workraft.task.split(':')[1]
+				if (command != 'none') {
+					console.log(command)
+					var peasant_id = Workraft.task.split(':')[0]
+					var code = Workraft.letters[Workraft.task.split(':')[2].split(',')[0]]+Workraft.task.split(':')[2].split(',')[1]+':'+Workraft.letters[this.x]+this.y
+					new Ajax.Request('/task/create',{
+						method:'post',
+						parameters: {
+							game_id: Workraft.game_id,
+							name: command,
+							specs: code,
+							peasant_id: peasant_id
+						},
+						onSuccess: function(response) {
+							alert('Telling peasant to '+command+'. ('+response.responseText+')')
+						}
+					})
+					Workraft.task = 'none'
+				}
+				if (command == 'none') {
+					if (this.type == 'C') {
+						alert('castle')
+					} else if (this.type == 'H') {
+						alert('town hall')
+					} else if (this.type == 'F') {
+						alert('farm')
+					}
+				}
+			},
+			hover: function() {
+				Workraft.clear_highlights()
+				if (Workraft.highlighting.match(this.type)) {
+					if (this.big) this.element().insert("<img class'highlight' src='/tiles/highlight-big-square-green.gif'/>")
+					else this.element().insert("<img class'highlight' src='/tiles/highlight-square-green.gif'/>")
+				}
+			}
+		})
+
+	</script>
+	
+	<div id="header">
+		<h1>Workraft</h1>
+		<p>
+			Welcome to Workraft, my lord, where you command...
+		</p>
+	</div>
+
+	<div id="game">
+		<div id="map"></div>
+
+		<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-21 %>px;">
+			<div id="info">
+				
+			</div>
+			<div id="selection">
+				<div id="portrait"></div>
+				<div id="tasks"></div>
+			</div>
+			<div id="message"></div>
+		</div>
+
+		<div id="peasants"></div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8">
 		Event.observe(document, 'keypress', Workraft.keypress)
 		// Event.observe(document, 'keyup', Events.keyup)
 		var Peasant = Class.create({
@@ -73,7 +171,7 @@
 				this.y = y*64
 				this.id = 'peasant-'+parseInt((new Date).getTime())
 				$('peasants').insert('<a class="peasant" href="" id="'+this.id+'"></a>')
-				$(this.id).href = "javascript:Workraft.peasants.get('"+this.id+"').mode = 'chopping'"
+				$(this.id).href = "javascript:Workraft.peasants.get('"+this.id+"').click()"
 				Workraft.peasants.set(this.id,this)
 			},
 			mode: 'walking',
@@ -96,14 +194,63 @@
 				} else {
 					$(this.id).style.backgroundPosition = "0px "+this.set+"px"
 				}
+			},
+			click: function() {
+				Workraft.clear()
+				this.tasks.each(function(task){
+					$('tasks').insert(this.task_prefix+this.id+task)
+				},this)
+				$('portrait').innerHTML = "<h3>Peasant</h3>"
+			},
+			task_prefix: "<a href='javascript:Workraft.peasants.get(\"",
+			tasks: ["\").build()' class='task'>Build farm</a>",
+					"\").harvest()' class='task'>Harvest wood</a>",
+					"\").move()' class='task'>Move</a>",
+					"\").attack()' class='task'>Attack</a>",
+					"\").cancel()' class='task'>cancel</a>"],
+			build: function() {
+				Workraft.clear_highlights()
+				$('message').innerHTML = 'Select a place to build.'
+				Workraft.task = this.id+':'+'build:'+(this.x/64)+','+(this.y/64)
+				Workraft.selected = this
+				Workraft.highlighting = 'G'
+			},
+			harvest: function() {
+				Workraft.clear_highlights()
+				$('message').innerHTML = 'Select a place to harvest trees.'
+				Workraft.task = this.id+':'+'harvest:'+(this.x/64)+','+(this.y/64)
+				Workraft.selected = this
+				Workraft.highlighting = 'T'
+			},
+			move: function() {
+				Workraft.clear_highlights()
+				$('message').innerHTML = 'Select a place to move to.'
+				Workraft.task = this.id+':'+'move:'+(this.x/64)+','+(this.y/64)
+				Workraft.selected = this
+				Workraft.highlighting = 'G'
+			},
+			attack: function() {
+				Workraft.clear_highlights()
+				$('message').innerHTML = 'Select a target.'
+				Workraft.task = this.id+':'+'attack:'+(this.x/64)+','+(this.y/64)
+				Workraft.selected = this
+				Workraft.highlighting = 'HFEC'
+			},
+			cancel: function() {
+				Workraft.clear_highlights()
+				Workraft.clear()
+				Workraft.selected = null
 			}
 		})
+		
 		// just add dummy peasants for testing:
 		new Peasant(0,1)
 		new Peasant(2,2)
 
 		// draw every frame
 		new PeriodicalExecuter(Workraft.draw,0.1)
+		// check if tasks have been completed
+		new PeriodicalExecuter(Workraft.draw,2)
 	</script>
 	
 </body>
