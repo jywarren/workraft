@@ -1,0 +1,6 @@
+<h3>Tasks available</h3>
+<div id='tasks'>
+	<% @tasks.each do |task| %>
+		<a href='/task/view/<%= task.id %>'><%= task.name %></a> <br />
+	<% end %>
+</div>

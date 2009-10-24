@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Workraft</title>
+	<script src="/javascripts/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	<style type="text/css" media="screen">
+		#task {
+			padding:10px;
+			padding-top:340px;
+		}
+		.tile {
+			text-align:center;
+			color:white;
+			border:1px dotted white;
+		}
+		.tile.start {
+			border:2px dotted red;
+			z-index:8;
+			width:62px;
+			height:62px;
+		}
+		.tile.selected {
+			border:2px dotted yellow;
+			z-index:7;
+			width:62px;
+			height:62px;
+		}
+		.tile.end {
+			border:2px dotted orange;
+			width:62px;
+			height:62px;
+			z-index:8;
+		}
+		.tile.done {
+			border-color:blue;
+			z-index:8;
+		}
+		.alert {
+			border:2px solid #900;
+			background:#F2AFB1;
+			color:#400;
+			margin:4px 0;
+			padding:8px;
+		}
+		.route {
+			font-size:1.4em;
+			background:#FFF4DF;
+			color:#835C36;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+		var Workraft = {
+			done: false,
+			decode: function(code) {
+				var letters = 'ABCDEFGHIJK'
+				// check if the tile is a neighbor
+				var x = letters.search(code[0])
+				var y = code[1]
+				return [x,y]
+			},
+			select_tile: function(code,type) {
+				if (Workraft.done == false) {
+					var selection = Workraft.decode(code)
+					var last_pos = Workraft.decode($('route').value.split(',').last())
+					var nearby = false
+					if (Math.abs(last_pos[0] - selection[0]) <= 1 && selection[1] == last_pos[1]) {
+						nearby = true
+					} else if (Math.abs(last_pos[1] - selection[1]) <= 1 && selection[0] == last_pos[0]) {
+						nearby = true
+					}
+					console.log(selection == last_pos)
+					if (selection[0] == last_pos[0] && selection[1] == last_pos[1]) nearby = false
+					if (nearby) {
+						if (type == 'G' || code == '<%= @task.last %>') {
+							$('route').value = $('route').value+','+code
+							$('tile_'+code).addClassName('selected')
+							if (code == '<%= @task.last %>') {
+								// done!!!
+								$('tile_'+code).addClassName('done')
+								Workraft.done = true
+								$('done').show()
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+	<div id="game">
+	<div id="map">
+		<% width = 0 %>
+		<% count = 0 %>
+		<% letters = ['A','B','C','D','E','F','G','H','I','J','K'] %>
+		<% map_height = 0 %>
+		<% @tiles.each do |tile,index| %>
+			<% y = (count/@game.width).to_i %>
+			<% x = count-(@game.width*y) %>
+			<% tile_code = letters[x]+y.to_s %>
+			<% start_tile = @task.first == tile_code %>
+			<% end_tile = @task.last == tile_code %>
+			
+			<% big = (tile[:type] == "C" || tile[:type] == "H") %>
+				<% unless tile[:type] == 'X' %>
+				<a id='tile_<%= tile_code %>' class='tile <%= 'big' if big %> <%= 'end' if end_tile %> <%= 'start' if start_tile %>' style='background:url("/tiles/<%= tile[:image] %>");left:<%= x*64 %>px;top:<%= y*64 %>px;' onClick="Workraft.select_tile('<%= tile_code %>','<%= tile[:type] %>')" >
+					<%= tile_code %>
+					<%= '<br />START' if start_tile %>
+				</a>
+		
+		
+				<% end %>
+			<% count += 1 %>
+			<% map_height = y+1 %>
+		<% end %>
+	</div>
+	</div>
+	
+	<div id='task'>
+		<p>
+			<b>Guide the peasant to where he can <%= @task.name %>: </b> 
+		</p>
+		<p>
+		<i>Click the map tiles he should walk along to get from <%= @task.first %> to <%= @task.last %>:</i>
+		</p>
+		<form action="/task/submit/<%= @task.id %>" method="get" accept-charset="utf-8">
+			<label for="route">Route: </label><input class='route' disabled='true' type="text" name="route" value="<%= @task.first %>" id="route">
+			
+			<p id="done" class='alert' style="display:none;">You're done: please submit the task immediately: <input type="submit" value="Submit"></p>
+		</form>
+	</div>
+
+</body>
+</html>

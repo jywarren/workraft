@@ -15,6 +15,7 @@
 			id: '<%= @game.id %>',
 			gold: 200,
 			tiles: new Hash,
+			tasks: new Hash,
 			frame: 0,
 			letters: ['A','B','C','D','E','F','G','H','I','J','K'],
 			selected: null,
@@ -29,12 +30,17 @@
 				<% count = 0 %>
 				<% map_height = 0 %>
 				<% @tiles.each do |tile,index| %>
-					<% y = (count/@width).to_i %>
-					<% x = count-(@width*y) %>
+					<% y = (count/@game.width).to_i %>
+					<% x = count-(@game.width*y) %>
 					new Tile('<%= tile[:type]%>',<%= x %>,<%= y %>,'<%= tile[:image] %>')
 					<% count += 1 %>
 					<% map_height = y+1 %>
 				<% end %>
+			},
+			log: function(msg) {
+				if (console && console.log) {
+					console.log(msg)
+				}
 			},
 			keypress: function(event) {
 				// if (e.keyCode)
@@ -49,12 +55,18 @@
 				////////////////////////////////////////////////////////
 				// Receive completed commands, if any:
 				////////////////////////////////////////////////////////
-				new Ajax.Request('/game/update',{
+				new Ajax.Request('/game/update/'+Workraft.id,{
 					onSuccess: function(response) {
 						response = response.responseText.evalJSON()
-						response.tasks.each(function(task){
+						response.each(function(task){
+							task = task.task
 							// must identify which peasant it's for
-							// 
+							var peasant_id = Workraft.tasks.get(task.id)
+							if (peasant_id) {
+								Workraft.tasks.unset(task.id)
+								Workraft.log('fulfilled task: '+task.id)
+								Workraft.peasants.get(peasant_id).do_task(task)
+							}
 						})
 					}
 				})
@@ -100,30 +112,32 @@
 				////////////////////////////////////////////////////////
 				var command = Workraft.task.split(':')[1]
 				if (command != 'none') {
-					console.log(command)
+					Workraft.log(command)
 					var peasant_id = Workraft.task.split(':')[0]
 					var code = Workraft.letters[Workraft.task.split(':')[2].split(',')[0]]+Workraft.task.split(':')[2].split(',')[1]+':'+Workraft.letters[this.x]+this.y
 					new Ajax.Request('/task/create',{
 						method:'post',
 						parameters: {
-							game_id: Workraft.game_id,
+							game_id: Workraft.id,
 							name: command,
 							specs: code,
 							peasant_id: peasant_id
 						},
 						onSuccess: function(response) {
-							alert('Telling peasant to '+command+'. ('+response.responseText+')')
+							Workraft.log('Telling peasant to '+command+'. (task id:'+response.responseText+', peasant_id:'+peasant_id+')')
+							// Record peasant id and task id for retrieval later:
+							Workraft.tasks.set(response.responseText,peasant_id)
 						}
 					})
 					Workraft.task = 'none'
 				}
 				if (command == 'none') {
 					if (this.type == 'C') {
-						alert('castle')
+						Workraft.log('castle')
 					} else if (this.type == 'H') {
-						alert('town hall')
+						Workraft.log('town hall')
 					} else if (this.type == 'F') {
-						alert('farm')
+						Workraft.log('farm')
 					}
 				}
 			},
@@ -148,7 +162,7 @@
 	<div id="game">
 		<div id="map"></div>
 
-		<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@width)-21 %>px;">
+		<div id="menu" style="position:absolute;top:<%= map_height*64 %>px;width:<%= (64*@game.width)-21 %>px;">
 			<div id="info">
 				
 			</div>
@@ -202,6 +216,21 @@
 				},this)
 				$('portrait').innerHTML = "<h3>Peasant</h3>"
 			},
+			do_task: function(task) {
+				Workraft.log('yes my lord!!')
+				
+				// here we have to interpret the path that the task describes, 
+				// and walk it, with correct sprite turns and 'walking' animation
+				Workraft.log('following '+task.route)
+				var path = task.route.split(',')
+				// check if the first location is the current one
+				// if ()
+				this.path = task.route.split
+				
+				// then 'do' the task, such as harvest wood,
+				// with the appropriate animation
+				
+			},
 			task_prefix: "<a href='javascript:Workraft.peasants.get(\"",
 			tasks: ["\").build()' class='task'>Build farm</a>",
 					"\").harvest()' class='task'>Harvest wood</a>",
@@ -250,7 +279,7 @@
 		// draw every frame
 		new PeriodicalExecuter(Workraft.draw,0.1)
 		// check if tasks have been completed
-		new PeriodicalExecuter(Workraft.draw,2)
+		new PeriodicalExecuter(Workraft.update,2)
 	</script>
 	
 </body>

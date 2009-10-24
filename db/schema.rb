@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091018200306) do
+ActiveRecord::Schema.define(:version => 20091024153052) do
 
   create_table "games", :force => true do |t|
     t.string   "map",        :default => "TTTTTTTTTG,GGFGTGTCXG,EGGGGGTXXG,GGTHXGTGGG,GGTXXGGGGG"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20091018200306) do
     t.integer  "game_id",    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "completed",  :default => false
+    t.string   "state",      :default => "incomplete"
   end
 
 end
