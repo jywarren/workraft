@@ -4,6 +4,17 @@ class GameController < ApplicationController
     @game = Game.find(params[:id])
     @tiles = @game.tiles
   end
+
+  def list
+    @games = Game.find :all, :order => 'id DESC', :limit => 100
+  end
+
+  def new
+    @game = Game.new
+    @game.save
+
+    redirect_to '/game/play/'+@game.id.to_s
+  end
   
   def update
     tasks = Task.find(:all,:conditions => {:game_id => params[:id], :state => 'complete'})

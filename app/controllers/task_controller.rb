@@ -13,7 +13,7 @@ class TaskController < ApplicationController
   def list
     @game = Game.find(params[:id])
     @tiles = @game.tiles
-    @tasks = Task.find(:all, :conditions => {:state => 'incomplete', :game_id => params[:id]})
+    @tasks = Task.find(:all, :conditions => {:state => 'incomplete', :game_id => params[:id]},:order => 'id DESC')
   end
   
   def view
@@ -24,10 +24,12 @@ class TaskController < ApplicationController
   
   def submit
     task = Task.find_by_id(params[:id])
+    puts 'route!!!'
+    puts params[:route]
     task.route = params[:route]
     task.state = 'complete'
     task.save
-    redirect_to 'task/list'
+    redirect_to '/task/list/'+task.game_id.to_s
   end
 
   def fetch

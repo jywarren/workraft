@@ -1,4 +1,5 @@
 class Game < ActiveRecord::Base
+  has_many :tasks
 
   def tiles
     tiles = []
@@ -20,6 +21,10 @@ class Game < ActiveRecord::Base
   
   def width
     self.map.split(',')[0].length
+  end
+  
+  def active_tasks
+    self.tasks.find(:all,:conditions => {:state => 'incomplete'})
   end
 
 end

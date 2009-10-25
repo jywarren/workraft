@@ -133,10 +133,14 @@
 		<i>Click the map tiles he should walk along to get from <%= @task.first %> to <%= @task.last %>:</i>
 		</p>
 		<form action="/task/submit/<%= @task.id %>" method="get" accept-charset="utf-8">
-			<label for="route">Route: </label><input class='route' disabled='true' type="text" name="route" value="<%= @task.first %>" id="route">
+			<label for="route">Route: </label><input class='route' type="text" name="route" value="<%= @task.first %>" id="route">
 			
 			<p id="done" class='alert' style="display:none;">You're done: please submit the task immediately: <input type="submit" value="Submit"></p>
 		</form>
+		
+		<p>
+			<a href='/task/list/<%= @game.id %>'>&laquo; Give up on this task and go back to task list</a>
+		</p>
 	</div>
 
 </body>

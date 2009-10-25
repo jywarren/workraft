@@ -1,0 +1,12 @@
+<h3>Games in play</h3>
+<div id='games'>
+	<ul>
+	<% @games.each do |game| %>
+		<li><b>Game <%= game.id %></b> | <%= game.updated_at.to_s(:short) %> (<%= game.active_tasks.length %> tasks) <a href='/task/list/<%= game.id %>'>PLAY &raquo;</a></li>
+	<% end %>
+	</ul>
+</div>
+
+<p>
+	<a href='/'>&laquo; Home</a>
+</p>

@@ -35871,3 +35871,6 @@ Processing GameController#update (for 127.0.0.1 at 2009-10-24 13:16:18) [POST]
   Parameters: {"id"=>"1"}
   [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
 Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` LIMIT 1[0m
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
