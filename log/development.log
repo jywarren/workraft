@@ -35874,3 +35874,2582 @@ Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/1]
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
   [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` LIMIT 1[0m
   [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 169.254.94.254 at 2009-10-25 17:47:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGame Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 1) [0m
+Rendering game/play
+Completed in 322ms (View: 278, DB: 3) | 200 OK [http://nautilus.local/game/play/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:47:59) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 30ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:01) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (1.4ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:03) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:05) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:07) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#list (for 127.0.0.1 at 2009-10-25 17:48:08) [GET]
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` ORDER BY id DESC LIMIT 100[0m
+Rendering game/list
+  [4;35;1mGame Columns (23.4ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.game_id = 4 AND (`tasks`.`state` = 'incomplete')) [0m
+  [4;35;1mTask Load (0.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.game_id = 3 AND (`tasks`.`state` = 'incomplete')) [0m
+  [4;36;1mTask Load (0.4ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.game_id = 2 AND (`tasks`.`state` = 'incomplete')) [0m
+  [4;35;1mTask Load (0.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.game_id = 1 AND (`tasks`.`state` = 'incomplete')) [0m
+Completed in 394ms (View: 362, DB: 26) | 200 OK [http://localhost/game/list]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:09) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:11) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:15) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:17) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:19) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:21) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:24) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.9ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (1.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:50) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:52) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:54) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:56) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:48:58) [POST]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:48:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (2.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 58ms (View: 39, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:00) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:02) [POST]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '1' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://nautilus.local/game/update/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:04) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.2ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.7ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (1.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 169.254.94.254 at 2009-10-25 17:49:13) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 13ms (View: 3, DB: 3) | 200 OK [http://nautilus.local/game/play/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (2.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 4, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:17) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (27.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 47ms (View: 4, DB: 31) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:22) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#view (for 127.0.0.1 at 2009-10-25 17:49:23) [GET]
+  Parameters: {"id"=>"50"}
+  [4;35;1mTask Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (1.4ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 50) [0m
+  [4;35;1mGame Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering task/view
+Completed in 143ms (View: 121, DB: 8) | 200 OK [http://localhost/task/view/50]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:24) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#submit (for 127.0.0.1 at 2009-10-25 17:49:30) [GET]
+  Parameters: {"route"=>"C2,D2,E2,F2,F3", "id"=>"50"}
+  [4;36;1mTask Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = '50') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.5ms)[0m   [0mUPDATE `tasks` SET `updated_at` = '2009-10-25 21:49:30', `route` = 'C2,D2,E2,F2,F3', `state` = 'complete' WHERE `id` = 50[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3002/task/list/4
+Completed in 20ms (DB: 5) | 302 Found [http://localhost/task/submit/50?route=C2%2CD2%2CE2%2CF2%2CF3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (6.6ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (2.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (9.7ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 46ms (View: 4, DB: 19) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 5, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.1ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.2ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 4, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:48) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+  [4;35;1mTask Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (1.1ms)[0m   [0mUPDATE `tasks` SET `updated_at` = '2009-10-25 21:49:48', `state` = 'fetched' WHERE `id` = 50[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 27ms (View: 2, DB: 11) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:50) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:51) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (1.1ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 4, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:54) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 100ms (View: 94, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:49:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (2.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (1.1ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 25ms (View: 4, DB: 9) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.9ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:49:58) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:00) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.8ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:02) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:04) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:06) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:06) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:08) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:11) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:13) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:16) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 109ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:17) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:19) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:21) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:23) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:25) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:26) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:27) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 6, DB: 8) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:47) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 107ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:50:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:50:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:00) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:04) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:06) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:08) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.9ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:08) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:10) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:12) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:13) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 110ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:14) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:16) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:18) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:20) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:22) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:23) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:24) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:28) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:30) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:38) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:43) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:49) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.9ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 26ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 169.254.94.254 at 2009-10-25 17:51:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 31ms (View: 20, DB: 3) | 200 OK [http://nautilus.local/game/play/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:51:59) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:51:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:02) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:04) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:04) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:06) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:10) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:13) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:15) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:17) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:19) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.8ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.8ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 31ms (View: 6, DB: 9) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:21) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:23) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-25 17:52:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.7ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 15ms (View: 3, DB: 3) | 200 OK [http://localhost/game/play/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:25) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 107ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:27) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:28) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:29) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 25ms (View: 5, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:30) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:31) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:32) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:34) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:36) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:38) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:40) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:42) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 115ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:44) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:46) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:48) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:50) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:54) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:52:55) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 5, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:52:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:52:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:15) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (25.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 45ms (View: 9, DB: 26) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (20.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (107.3ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (50.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (23.6ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 197ms (View: 4, DB: 202) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:15) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:17) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.1ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:19) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 4, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:21) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:23) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:25) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (1.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (1.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 4, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:27) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:29) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:31) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.7ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (3.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (6.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 42ms (View: 15, DB: 13) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:33) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:35) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (1.1ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:37) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:39) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:41) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:41) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.4ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-25 17:53:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/game/play/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:44) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:46) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (2.1ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:48) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:50) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:51) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 83ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:54) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:53:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:53:58) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:00) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.8ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:02) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:04) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:06) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:08) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:10) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:12) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.9ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 27ms (View: 3, DB: 8) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:12) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (3.2ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 111ms (View: 1, DB: 3) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:14) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:16) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.5ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:18) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:20) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:22) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (81.2ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.8ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 100ms (View: 3, DB: 86) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:22) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:24) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:27) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.1ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:28) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:30) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:32) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 87ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:34) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:36) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:38) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:40) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 127.0.0.1 at 2009-10-25 17:54:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://localhost/game/play/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:43) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:44) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.9ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:46) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 21ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:48) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:50) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 81ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:54) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:54:58) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:54:58) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:00) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:02) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:04) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:06) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:08) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#create (for 127.0.0.1 at 2009-10-25 17:55:08) [POST]
+  Parameters: {"name"=>"build", "specs"=>"C2:F4", "peasant_id"=>"peasant-1256507682763", "game_id"=>"4", "_"=>""}
+  [4;36;1mTask Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.3ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `route`, `created_at`, `specs`, `updated_at`, `game_id`, `worker`, `state`) VALUES('build', '', '2009-10-25 21:55:08', 'C2:F4', '2009-10-25 21:55:08', 4, 'anonymous', 'incomplete')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Completed in 14ms (View: 1, DB: 4) | 200 OK [http://localhost/task/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:08) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:10) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 127.0.0.1 at 2009-10-25 17:55:12) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:13) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.7ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 169.254.94.254 at 2009-10-25 17:55:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.9ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 12ms (View: 3, DB: 3) | 200 OK [http://nautilus.local/game/play/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (1.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:36) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:39) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 3, DB: 8) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:42) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:44) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:46) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:48) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:50) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.1ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:52) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:54) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:55:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.6ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:56) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:55:58) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:00) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (2.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:02) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:06) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (5.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (1.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 28ms (View: 4, DB: 10) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 24ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:16) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.0ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 4, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (1.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (2.1ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:26) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:26) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:28) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:30) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#play (for 169.254.94.254 at 2009-10-25 17:56:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.1ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering game/play
+Completed in 26ms (View: 16, DB: 3) | 200 OK [http://nautilus.local/game/play/4]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.0ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 22ms (View: 3, DB: 9) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.2ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 7) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:37) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.8ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:39) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:41) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (1.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 95ms (View: 3, DB: 6) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:43) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#create (for 169.254.94.254 at 2009-10-25 17:56:43) [POST]
+  Parameters: {"name"=>"harvest", "specs"=>"C2:G3", "peasant_id"=>"peasant-1256507793674", "game_id"=>"4", "_"=>""}
+  [4;36;1mTask Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.3ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `route`, `created_at`, `specs`, `updated_at`, `game_id`, `worker`, `state`) VALUES('harvest', '', '2009-10-25 21:56:43', 'C2:G3', '2009-10-25 21:56:43', 4, 'anonymous', 'incomplete')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 13ms (View: 1, DB: 4) | 200 OK [http://nautilus.local/task/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:45) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:47) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:47) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 23ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:49) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#view (for 127.0.0.1 at 2009-10-25 17:56:49) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (1.4ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 56) [0m
+  [4;36;1mGame Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (1.2ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+Rendering task/view
+Completed in 23ms (View: 4, DB: 7) | 200 OK [http://localhost/task/view/56]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:51) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:53) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (4.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 11ms (View: 1, DB: 5) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#submit (for 127.0.0.1 at 2009-10-25 17:56:55) [GET]
+  Parameters: {"route"=>"C2,D2,E2,F2,F3,G3", "id"=>"56"}
+  [4;35;1mTask Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.7ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = '56') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.4ms)[0m   [0;1mUPDATE `tasks` SET `updated_at` = '2009-10-25 21:56:55', `route` = 'C2,D2,E2,F2,F3,G3', `state` = 'complete' WHERE `id` = 56[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3002/task/list/4
+Completed in 14ms (DB: 4) | 302 Found [http://localhost/task/submit/56?route=C2%2CD2%2CE2%2CF2%2CF3%2CG3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:56:55) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (2.1ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (11.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 31ms (View: 3, DB: 17) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:55) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (10.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+  [4;35;1mTask Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.4ms)[0m   [0mUPDATE `tasks` SET `updated_at` = '2009-10-25 21:56:55', `state` = 'fetched' WHERE `id` = 56[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 30ms (View: 2, DB: 16) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:57) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:56:59) [POST]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 88ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:00) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.6ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:57:01) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GameController#update (for 169.254.94.254 at 2009-10-25 17:57:03) [POST]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'complete') [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://nautilus.local/game/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:05) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.4ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 4, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 20ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.5ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGame Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `games`[0m
+  [4;35;1mGame Load (0.3ms)[0m   [0mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;35;1mTask Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TaskController#list (for 127.0.0.1 at 2009-10-25 17:57:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGame Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mGame Load (0.3ms)[0m   [0;1mSELECT * FROM `games` WHERE (`games`.`id` = 4) [0m
+  [4;35;1mTask Load (0.5ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`game_id` = '4' AND `tasks`.`state` = 'incomplete') ORDER BY id DESC[0m
+Rendering task/list
+  [4;36;1mTask Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Completed in 19ms (View: 3, DB: 5) | 200 OK [http://localhost/task/list/4]

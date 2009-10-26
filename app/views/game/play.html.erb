@@ -107,6 +107,7 @@
 					$('map').insert("<a class='tile "+this.bigclass+"' style='background:url(\"/tiles/"+image+"\");left:"+(x*64)+"px;top:"+(y*64)+"px;' id='"+x+'-'+y+"' ></a>")
 					$(this.x+'-'+this.y).observe('mouseover',this.hover.bind(this))
 					$(this.x+'-'+this.y).observe('mouseup',this.click.bind(this))
+					$(this.x+'-'+this.y).observe('touchend',this.click.bind(this))
 				}
 			},
 			element: function() {
@@ -193,7 +194,9 @@
 				this.y = y*64
 				this.id = 'peasant-'+parseInt((new Date).getTime())
 				$('peasants').insert('<a class="peasant" href="" id="'+this.id+'"></a>')
-				$(this.id).href = "javascript:Workraft.peasants.get('"+this.id+"').click()"
+				$(this.id).href = 'javascript:void(0);'
+				var peasant = this
+				$(this.id).observe('click',function() {peasant.click()})
 				Workraft.peasants.set(this.id,this)
 			},
 			mode: 'walking',
