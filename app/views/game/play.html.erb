@@ -14,6 +14,7 @@
 		var Workraft = {
 			id: '<%= @game.id %>',
 			gold: 200,
+			timber: 0,
 			tiles: new Hash,
 			tasks: new Hash,
 			frame: 0,
@@ -50,6 +51,7 @@
 				Workraft.peasants.values().each(function(peasant){
 					peasant.draw()
 				})
+				if (Workraft.selected && !Object.isUndefined(Workraft.selected.timber)) $('unit-resources').innerHTML = "<b>Gold:</b> "+Workraft.selected.gold+"<br /><b>Timber:</b> "+Workraft.selected.timber
 			},
 			// decode grid codes into number tuple (array)
 			decode: function(code) {
@@ -84,6 +86,7 @@
 				$('tasks').innerHTML = ""
 				$('message').innerHTML = ""
 				$('portrait').innerHTML = ""
+				$('unit-resources').innerHTML = ""
 			},
 			task: 'none',
 			// click: function(type,x,y) {
@@ -119,7 +122,7 @@
 				////////////////////////////////////////////////////////
 				// deal with commands, like build, harvest, move, attack
 				////////////////////////////////////////////////////////
-				var command = Workraft.task.split(':')[1]
+				var command = Workraft.task != 'none' ? Workraft.task.split(':')[1] : 'none'
 				if (command != 'none') {
 					Workraft.log(command)
 					var peasant_id = Workraft.task.split(':')[0]
@@ -178,6 +181,7 @@
 			<div id="selection">
 				<div id="portrait"></div>
 				<div id="tasks"></div>
+				<div id="unit-resources"></div>
 			</div>
 			<div id="message"></div>
 		</div>
@@ -206,19 +210,32 @@
 			// what frame of the animation we're in
 			step: 0,
 			task: 'none',
+			task_time: 0,
+			timber: 0,
+			gold: 0,
 			x: 64,
 			y: 64,
 			draw: function() {
+				this.task_time += 1
 				if (this.mode != 'standing') {
-					if (this.mode == 'walking') this.set = 0
-					if (this.mode == 'chopping') this.set = -48
+					if (this.mode == 'walking') {
+						this.set = 0
+						if (this.direction == 1) this.set = 2*-48
+						if (this.direction == 2) this.set = 3*-48
+						if (this.direction == 3) this.set = 4*-48
+					}
+					if (this.mode == 'chopping') {
+						this.set = -48
+						this.timber = parseInt(this.task_time/150)
+						if (this.task_time > 3000) this.mode = "standing"
+					}
 					$(this.id).style.backgroundPosition = this.steps[this.step]+"px "+this.set+"px"
 					$(this.id).style.top = this.y+'px'
 					$(this.id).style.left = this.x+'px'
 					this.step += 1
 					if (this.step >= this.steps.length) this.step = 0
 				} else {
-					$(this.id).style.backgroundPosition = "0px "+this.set+"px"
+					$(this.id).style.backgroundPosition = "-96px "+this.set+"px"
 				}
 				
 				if (this.task == 'none') {
@@ -232,6 +249,7 @@
 						if (this.x/64 > tile[0]) {
 							this.x -= speed
 							this.direction  = 3
+							
 						} else if (this.x/64 < tile[0]) {
 							this.x += speed
 							this.direction  = 1
@@ -250,9 +268,10 @@
 						
 					} else if (this.path.length == 0) {
 						// we've arrived, let's get working:
-						Workraft.log(this.task+'ing!!!')
+						//Workraft.log(this.task+'ing!!!')
 						// switch mode
-						
+						if (this.task == 'chopping') this.mode = 'chopping'
+						else this.mode = 'standing'
 					}
 				}
 			},
@@ -262,6 +281,7 @@
 					$('tasks').insert(this.task_prefix+this.id+task)
 				},this)
 				$('portrait').innerHTML = "<h3>Peasant</h3>"
+				$('unit-resources').innerHTML = "<b>Gold:</b> "+this.gold+"<br /><b>Timber:</b> "+this.timber
 			},
 			do_task: function(task) {
 				Workraft.log('yes my lord!!')
@@ -273,6 +293,7 @@
 				// if ()
 				this.path = path
 				this.task = task.name
+				if (this.task == 'move') this.mode = 'walking'
 				Workraft.log(this.task+'ing path: '+this.path)
 			},
 			task_prefix: "<a href='javascript:Workraft.peasants.get(\"",
