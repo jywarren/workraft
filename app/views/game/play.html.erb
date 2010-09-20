@@ -7,6 +7,8 @@
 	<title>Workraft</title>
 	<script src="/javascripts/prototype.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
 </head>
 <body>
 	
@@ -165,10 +167,6 @@
 	</script>
 	
 	<div id="header">
-		<h1>Workraft</h1>
-		<p>
-			Welcome to Workraft, my lord, where you command...
-		</p>
 	</div>
 
 	<div id="game">
@@ -226,8 +224,8 @@
 					}
 					if (this.mode == 'chopping') {
 						this.set = -48
-						this.timber = parseInt(this.task_time/150)
-						if (this.task_time > 3000) this.mode = "standing"
+						this.timber = parseInt(this.task_time/100)
+						if (this.task_time > 300) this.mode = "standing"
 					}
 					$(this.id).style.backgroundPosition = this.steps[this.step]+"px "+this.set+"px"
 					$(this.id).style.top = this.y+'px'
